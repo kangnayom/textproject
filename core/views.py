@@ -3,6 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.shortcuts import HttpResponse
 from core.models import Syllabus
+from soynlp.noun import LRNounExtractor
+
 
 def syllabus_check(request):
     results = []
