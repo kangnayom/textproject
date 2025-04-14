@@ -1,0 +1,7 @@
+<h2>시간표 직접 등록하기</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">등록하기</button>
+</form>
+

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,23 @@ INSTALLED_APPS =[
     
     'core',  
 ]
+
+
+import os
+import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myproject.settings')
+django.setup()
+
+# myproject/settings.py
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'learning_resource_system',         # 실제 생성한 DB 이름으로 변경
+        'USER': 'nayomi',              # MySQL에서 설정한 사용자 이름
+        'PASSWORD': 'skdus1023@',      # 설정한 비밀번호
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
